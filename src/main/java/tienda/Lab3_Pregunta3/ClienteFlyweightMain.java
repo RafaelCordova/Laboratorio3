@@ -16,7 +16,7 @@ public class ClienteFlyweightMain {
         System.out.println("=======REGISTRO DE EMPLEADOS CON PATRON FLYWEIGHT========");
         System.out.println("1. REGISTRAR EMPLEADO");
         System.out.println("2. MOSTRAR  EMPLEADOS");
-
+        System.out.println("3. VER PAISES DE EMPLEADO");
         do {
             System.out.print("Ingresa tu opcion :");
             opc = entrada.nextInt();
@@ -24,10 +24,14 @@ public class ClienteFlyweightMain {
                 case 1:
                     ClienteRepositorioImpl obj = new ClienteRepositorioImpl();
                     ClienteFlyweight.registrarEmpleado(clientesFlyweight);
+
                     obj.create(clientesFlyweight.get(clientesFlyweight.size()-1));
+
                     break;
                 case 2:
+
                     ClienteFlyweight.mostrarEmpleados(clientesFlyweight);
+
                     break;
                             }
         } while (opc != 4);
