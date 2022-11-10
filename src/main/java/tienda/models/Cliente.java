@@ -14,6 +14,7 @@ public class Cliente {
     private String direccion;
     private String numeroDocumento;
     private Direccion dir;
+    private ClienteEmpresa clienteEmpresa;
     private ContactoCliente contacto;
     private ClienteFlyweight clif;
 
@@ -94,6 +95,14 @@ public class Cliente {
         this.contacto = contacto;
     }
 
+    public ClienteEmpresa getClienteEmpresa() {
+        return clienteEmpresa;
+    }
+
+    public void setClienteEmpresa(ClienteEmpresa clienteEmpresa) {
+        this.clienteEmpresa = clienteEmpresa;
+    }
+
     public static Scanner getEntrada() {
         return entrada;
     }
@@ -114,6 +123,8 @@ public class Cliente {
         salida.append("\nManzana: ").append(cli.dir.getManzana());
         salida.append("\nLote: ").append(cli.dir.getLote());
         salida.append("\nContacto: ").append(cli.contacto);
+        salida.append("\n***** DATOS FINANCIEROS *****");
+        salida.append("\n"+cli.clienteEmpresa.toString());
         return salida.toString(); 
                                                     } 
     

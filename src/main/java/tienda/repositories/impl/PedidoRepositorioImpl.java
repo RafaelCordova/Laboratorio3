@@ -1,5 +1,9 @@
 package tienda.repositories.impl;
 
+import tienda.Lab3_Pregunta3.*;
+import tienda.Lab3_Pregunta3.interfaces.IEmpresaInspeccion;
+import tienda.models.*;
+import tienda.models.Cliente;
 import tienda.models.Pedido;
 import tienda.repositories.PedidoRepositorio;
 
@@ -62,5 +66,34 @@ public class PedidoRepositorioImpl implements PedidoRepositorio {
     public Pedido update(Pedido post, String id) {
         return pedidos.findOneAndReplace(new Document("_id", id), post, UPDATE_OPTIONS);
     }
-    
+
+    public void inspeccionEmpresa(Cliente cliObj, double montoTotal, Pedido order){
+        IEmpresaInspeccion inspeccion;
+        if(order.getMontoTotal()<10000){ //inspeccion basica
+            inspeccion = new Inspeccion();
+            inspeccion.inspeccionBasica(cliObj, order.getMontoTotal(),order);
+            System.out.println("\n\nPedido Procesado?: "+order.isEstado());
+
+        } else if (order.getMontoTotal()>=10000 && order.getMontoTotal()<20000) {
+            //inspeccion basica + lavados de activos
+            inspeccion = new LavadoActivosDecorator(new Inspeccion());
+            inspeccion.inspeccionBasica(cliObj, order.getMontoTotal(), order);
+            System.out.println("\n\nPedido Procesado?: "+order.isEstado());
+
+        } else if (order.getMontoTotal()>=20000 && order.getMontoTotal()<40000) {
+            //inspeccion basica + auditoria financera
+            inspeccion = new AuditoriaFiDecorator(new Inspeccion());
+            inspeccion.inspeccionBasica(cliObj, order.getMontoTotal(), order);
+            System.out.println("\n\nPedido Procesado?: "+order.isEstado());
+
+        } else if (order.getMontoTotal()>=40000) {
+            //inspeccion basica + lavado de activos + auditoria financiera + auditoria reputacion
+            inspeccion = new AuditoriaReDecorator(new AuditoriaFiDecorator(
+                    new LavadoActivosDecorator(new Inspeccion())));
+            inspeccion.inspeccionBasica(cliObj, order.getMontoTotal(), order);
+            System.out.println("\n\nPedido Procesado?: "+order.isEstado());
+        }
+    }
+
+
 }

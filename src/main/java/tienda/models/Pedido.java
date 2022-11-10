@@ -11,6 +11,7 @@ public class Pedido {
     private String cliente;
     private List<IPedidoDetalle> detallePedido;
     private Cliente clienteObj;
+    private boolean estado;
 
     public Pedido() {}
 
@@ -58,6 +59,14 @@ public class Pedido {
         this.cliente = cliente;
     }
 
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
     public List<IPedidoDetalle> getDetallePedido() {
         //List<IOrderItem> ordersItems = new ArrayList<>();
         return detallePedido;
@@ -89,5 +98,9 @@ public class Pedido {
 
         System.out.println("\nPROCESANDO PEDIDO ...");
         paymentMethod.pagarPedido(this);
+    }
+    @Override
+    public String toString() {
+        return "\nEstado del Pedido{"+ estado+"}";
     }
 }

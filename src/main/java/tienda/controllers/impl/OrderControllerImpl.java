@@ -58,10 +58,14 @@ public class OrderControllerImpl implements OrderController {
 
         order.pagar(paymentMethod);
 
-        Cliente cliObj = (Cliente)customerRepository.find("63362b6aecf2d11ce0310c89"); //ID DE ROCIO GUEVARA
+        /*Cliente cliObj = (Cliente)customerRepository.find("63362b6aecf2d11ce0310c89"); //ID DE ROCIO GUEVARA
         order.setClienteObj( cliObj );
         System.out.println( cliObj.imprimeDatosCliente(cliObj)) ;
        //System.out.println( cliObj.imprimeDatosCliente()) ;
+        orderRepository.create(order);*/
+        Cliente cliObj2 = (Cliente)customerRepository.find("636a86e28d151f0379b6d649");
+        order.setClienteObj( cliObj2 );
+        System.out.println( cliObj2.imprimeDatosCliente(cliObj2)) ;
         orderRepository.create(order);
             
         context.status(HttpStatus.CREATED_201)
