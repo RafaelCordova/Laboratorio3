@@ -73,7 +73,7 @@ public class Main {
         }));
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {//4 comentario
 
         new Main().startup();
         ClienteFlyweightMain.test();
