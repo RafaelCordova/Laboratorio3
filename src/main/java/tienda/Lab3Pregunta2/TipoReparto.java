@@ -1,5 +1,5 @@
 package tienda.Lab3Pregunta2;
-nvmbvm
+
 public class TipoReparto extends AbstractTipoReparto{
 
     private String tipoR;
@@ -19,7 +19,7 @@ public class TipoReparto extends AbstractTipoReparto{
 
     @Override
     public String toString() { return "TipoReparto{" + "tipoR='" + tipoR + '\'' +  ", abstractHorarioEntrega=" + abstractHorarioEntrega + '}'; }
-
+    
 
     @Override
     public void definirTipoReparto() {
