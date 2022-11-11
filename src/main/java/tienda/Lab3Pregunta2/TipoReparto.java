@@ -1,5 +1,5 @@
 package tienda.Lab3Pregunta2;
-
+nvmbvm
 public class TipoReparto extends AbstractTipoReparto{
 
     private String tipoR;
