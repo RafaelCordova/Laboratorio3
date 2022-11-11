@@ -10,7 +10,7 @@ public class ConcreteManana extends AbstractHorarioEntrega {
     }
 
     @Override
-    public void determinarHorarioEntrega() {
-        System.out.println("EL HORARIO DE ENTREGA ES MAÑANA DE 9 A 12");
+    public void setHorario(String horario) {
+        horario = "EL HORARIO DE ENTREGA ES EN LA MAÑANA DE 9am A 12am";
     }
 }

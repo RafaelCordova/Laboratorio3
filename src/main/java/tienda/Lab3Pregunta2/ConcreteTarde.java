@@ -1,6 +1,6 @@
 package tienda.Lab3Pregunta2;
 
-public class ConcreteTarde extends  AbstractHorarioEntrega{
+public class ConcreteTarde extends AbstractHorarioEntrega{
 
     public ConcreteTarde() {
     }
@@ -10,7 +10,7 @@ public class ConcreteTarde extends  AbstractHorarioEntrega{
     }
 
     @Override
-    public void determinarHorarioEntrega() {
-        System.out.println("EL HORARIO DE ENTREGA ES DE TARDE 12 A 3");
+    public void setHorario(String horario) {
+        horario = "EL HORARIO DE ENTREGA ES EN LA TARDE DE 12pm A 3pm";
     }
 }

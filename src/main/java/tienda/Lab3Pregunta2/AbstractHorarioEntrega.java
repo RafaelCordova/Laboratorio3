@@ -11,11 +11,10 @@ public abstract class AbstractHorarioEntrega {
     public void setHorario(String horario) { this.horario = horario; }
 
 
-    public abstract void determinarHorarioEntrega();
-
     @Override
     public String toString() { return "AbstractHorarioEntrega{" +  "horario='" + horario + '\'' + '}'; }
 
-                            }
+
+}
 
 

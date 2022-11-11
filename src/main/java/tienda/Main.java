@@ -6,6 +6,7 @@ import io.javalin.plugin.openapi.OpenApiPlugin;
 import io.javalin.plugin.openapi.ui.SwaggerOptions;
 import io.swagger.v3.oas.models.info.Info;
 
+import tienda.Lab3Pregunta2.RepartoMain;
 import tienda.Lab3_Pregunta3.ClienteFlyweightMain;
 import tienda.config.DBConnectionManager;
 import tienda.controllers.impl.CustomerControllerImpl;
@@ -75,8 +76,9 @@ public class Main {
 
     public static void main(String[] args) {
         new Main().startup();
-        ClienteFlyweightMain.test();
-                                }
+        //ClienteFlyweightMain.test();
+        RepartoMain.test();
+    }
                                         }
 
         /*

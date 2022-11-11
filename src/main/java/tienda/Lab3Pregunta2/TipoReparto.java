@@ -23,6 +23,6 @@ public class TipoReparto extends AbstractTipoReparto{
 
     @Override
     public void definirTipoReparto() {
-        System.out.println("EL TIPO DE REPARTO ES "+tipoR+" y con horario de entrega :"+ abstractHorarioEntrega);
+        System.out.println("EL TIPO DE REPARTO ES "+tipoR+" y con horario de entrega :"+ abstractHorarioEntrega.getHorario());
                                      }
                                                         }
