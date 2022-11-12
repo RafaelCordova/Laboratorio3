@@ -3,11 +3,8 @@ package tienda.Lab3Pregunta2;
 public abstract class TipoReparto {
     private String tipoR;
     private AbstractHorarioEntrega horarioEntrega;
-
     public abstract String definirTipoReparto();
-
     public abstract void definirReparto(AbstractHorarioEntrega horarioEntrega);
-
     public String getTipoR() {
         return tipoR;
     }
