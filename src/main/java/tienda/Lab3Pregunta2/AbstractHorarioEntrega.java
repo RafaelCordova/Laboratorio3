@@ -16,15 +16,13 @@ public abstract class AbstractHorarioEntrega {
         return horario;
     }
 
-<<<<<<< Updated upstream
+
     @Override
     public String toString() { return "AbstractHorarioEntrega{" +  "horario='" + horario + '\'' + '}'; }
-=======
+
     public void setHorario(String horario) {
         this.horario = horario;
     }
-
->>>>>>> Stashed changes
 
 
 }

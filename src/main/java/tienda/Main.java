@@ -5,11 +5,7 @@ import io.javalin.plugin.openapi.OpenApiOptions;
 import io.javalin.plugin.openapi.OpenApiPlugin;
 import io.javalin.plugin.openapi.ui.SwaggerOptions;
 import io.swagger.v3.oas.models.info.Info;
-import java.util.Scanner;
-import tienda.InterfazCliente.GUI_Cliente;
 
-import tienda.Lab3Pregunta2.RepartoMain;
-import tienda.Lab3_Pregunta3.ClienteFlyweightMain;
 import tienda.config.DBConnectionManager;
 import tienda.controllers.impl.CustomerControllerImpl;
 import tienda.controllers.impl.OrderControllerImpl;
@@ -80,42 +76,14 @@ public class Main {
         
 
         new Main().startup();
-<<<<<<< Updated upstream
-        //ClienteFlyweightMain.test();
-        RepartoMain.test();
+
+
+
     }
                                         }
 
-=======
-        ClienteFlyweightMain.test();
->>>>>>> Stashed changes
-        /*
-         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUI_Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUI_Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUI_Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUI_Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
 
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GUI_Cliente().setVisible(true);
-            }
-        }); */
-    }
-}
-                
-                    
+
         
         
      

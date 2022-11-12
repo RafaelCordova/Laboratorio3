@@ -8,18 +8,12 @@ public abstract class TipoReparto{
 
     public abstract String definirTipoReparto();
 
-    public abstract void definirHorarioReparto(AbstractHorarioEntrega horario);
+    public abstract void definirHorarioReparto(AbstractHorarioEntrega horarioEntrega);
 
-<<<<<<< Updated upstream
-    @Override
-    public String toString() { return "TipoReparto{" + "tipoR='" + tipoR + '\'' +  ", abstractHorarioEntrega=" + abstractHorarioEntrega + '}'; }
-    
 
     @Override
-    public void definirTipoReparto() {
-        System.out.println("EL TIPO DE REPARTO ES "+tipoR+" y con horario de entrega :"+ abstractHorarioEntrega.getHorario());
-                                     }
-=======
+    public String toString() { return "TipoReparto{" + "tipoR='" + tipoR + '\'' +  ", abstractHorarioEntrega=" + horarioEntrega + '}'; }
+
 
     public String getTipoR() {
         return tipoR;
@@ -37,10 +31,7 @@ public abstract class TipoReparto{
         this.horarioEntrega = abstractHorarioEntrega;
     }
 
-    @Override
-    public String toString() {
-        return "TipoReparto{" + "tipoR='" + tipoR + '\'' +  ", horarioEntrega=" + horarioEntrega + '}';
-    }
+   }
 
->>>>>>> Stashed changes
-                                                        }
+
+
