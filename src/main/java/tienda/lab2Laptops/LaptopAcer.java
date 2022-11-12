@@ -17,8 +17,8 @@ import tienda.Lab2Interfaces.ITecladoLuminoso;
 
 public class LaptopAcer extends Laptop implements ITecladoLuminoso,IConexionHDMI,ITarjetaDedicada,IDiscoM2{
 
-    public LaptopAcer(double precio, int año, float peso) {
-        super(precio, año, peso);
+    public LaptopAcer(double precio, int aÃ±o, float peso) {
+        super(precio, aÃ±o, peso);
     }
 
     public int velocidad(int velocidad) {
@@ -50,7 +50,7 @@ public class LaptopAcer extends Laptop implements ITecladoLuminoso,IConexionHDMI
     public void mostrardatos(int velocidad,String version,String tipo){
 
         System.out.println("El precio de la laptop Acer es de: "+getPrecio());
-        System.out.println("El año de la laptop Acer es de: "+getAño());
+        System.out.println("El aï¿½o de la laptop Acer es de: "+getAÃ±o());
         System.out.println("El peso de la laptop Acer es de: "+getPeso());
         System.out.println("La velocidad del discoM2 de la laptop Acer es de: "+velocidad(velocidad));
         System.out.println("La version de la tarjeta dedicada de la laptop Acer es de: "+version(version));

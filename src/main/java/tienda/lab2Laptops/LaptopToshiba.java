@@ -18,8 +18,8 @@ import tienda.Lab2Interfaces.ITarjetaIntegrada;
 public class LaptopToshiba extends  Laptop implements IDiscoHDD,ITarjetaIntegrada,ICamaraWeb,ILectorDisco{
     
 
-    public LaptopToshiba(double precio, int año, float peso) {
-        super(precio, año, peso);
+    public LaptopToshiba(double precio, int aÃ±o, float peso) {
+        super(precio, aÃ±o, peso);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class LaptopToshiba extends  Laptop implements IDiscoHDD,ITarjetaIntegrad
     public void mostrardatos(String tipo,String procesador,int capacidad){
         
         System.out.println("El precio de la laptop Toshiba es de: "+getPrecio());
-        System.out.println("El año de la laptop Toshiba es de: "+getAño());
+        System.out.println("El aï¿½o de la laptop Toshiba es de: "+getAÃ±o());
         System.out.println("El peso de la laptop Toshiba es de: "+getPeso());
         System.out.println("El tipo de lector de disco de la laptop Toshiba es de: "+tipo);
         System.out.println("El procesador de la tarjeta integrada de la laptop Toshiba es de: "+procesador);

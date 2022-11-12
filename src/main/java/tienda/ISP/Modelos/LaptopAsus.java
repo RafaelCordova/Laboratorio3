@@ -15,8 +15,8 @@ import tienda.ISP.Interfaces.ITarjetaVideo;
  */
 public class LaptopAsus extends Laptop implements IRam,IDiscoSolido,ITarjetaVideo{
     
-    public LaptopAsus(String serie,double peso, int año) {
-        super(serie, peso, año);
+    public LaptopAsus(String serie,double peso, int aÃ±o) {
+        super(serie, peso, aÃ±o);
     }
 
         public void datos(double ram,double capa,int trans, String marca,String modelo){
@@ -24,7 +24,7 @@ public class LaptopAsus extends Laptop implements IRam,IDiscoSolido,ITarjetaVide
             System.out.println("ID: "+getId());
         System.out.println("SERIE :"+getSerie());
         System.out.println("PESO :"+getPeso());
-        System.out.println("AÑO :"+getAño());
+        System.out.println("Aï¿½O :"+getAÃ±o());
          System.out.println(cantidadRam(ram));
          System.out.println(capacidadDiscoSolido(capa, trans));
          System.out.println(mostrarVideo(marca,modelo));
