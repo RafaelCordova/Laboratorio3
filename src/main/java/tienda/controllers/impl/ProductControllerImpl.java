@@ -21,14 +21,19 @@ public class ProductControllerImpl implements ProductController{
 
     @Override
     public void create(Context context) {
-
+        
         Producto product = context.bodyAsClass(Producto.class);
         System.out.println("Producto: " + product);
+
+        
+        //System.out.println("pruebaProductoValidator: "+context.bodyValidator(Producto.class));
+
+       // Producto product2 = context.bodyValidator(Producto.class));
 
         productRepository.create(product);
         context.status(HttpStatus.CREATED_201)
                 .header(HttpHeader.LOCATION.name(), Paths.formatPostLocation(product.getId().toString()));
-
+                System.out.println("pruebaProducto: "+context.formParam("producto"));
     }
 
     @Override

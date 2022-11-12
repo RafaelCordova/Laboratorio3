@@ -16,8 +16,8 @@ import tienda.ISP.Interfaces.ITarjetaVideo;
  */
 public class LaptopAcerNitro5 extends Laptop implements ITarjetaVideo,IMemOptane,IDiscoM2,IDiscoDuro{
     
-    public LaptopAcerNitro5(String serie, double peso, int año) {
-        super(serie, peso, año);
+    public LaptopAcerNitro5(String serie, double peso, int aÃ±o) {
+        super(serie, peso, aÃ±o);
     }
     
         
@@ -26,7 +26,7 @@ public class LaptopAcerNitro5 extends Laptop implements ITarjetaVideo,IMemOptane
         System.out.println("ID :"+getId());
         System.out.println("SERIE :"+getSerie());
          System.out.println("PESO :"+getPeso());
-        System.out.println("AÑO :"+getAño());
+        System.out.println("Aï¿½O :"+getAÃ±o());
         System.out.println(mostrarVideo(marca,modelo));
         System.out.println(memoriaOptane(memOptane,marca_Optane));
         System.out.println(discoM2(marca_M2,costo));

@@ -6,6 +6,13 @@ import io.javalin.plugin.openapi.OpenApiPlugin;
 import io.javalin.plugin.openapi.ui.SwaggerOptions;
 import io.swagger.v3.oas.models.info.Info;
 
+
+
+import tienda.Lab3_Pregunta3.ClienteFlyweightMain;
+import tienda.Lab3_Pregunta4.controllers.Impl.EntregasControllerImpl;
+import tienda.Lab3_Pregunta4.repositories.EntregasRepositorio;
+import tienda.Lab3_Pregunta4.repositories.Impl.EntregasRepositorioImpl;
+
 import tienda.config.DBConnectionManager;
 import tienda.controllers.impl.CustomerControllerImpl;
 import tienda.controllers.impl.OrderControllerImpl;
@@ -20,6 +27,7 @@ public class Main {
     private final CustomerControllerImpl customerController;
     private final OrderControllerImpl orderController;
     private final ProductControllerImpl productController;
+    private final EntregasControllerImpl entregaController;
 
     public Main() {
         this.manager = new DBConnectionManager();
@@ -32,6 +40,9 @@ public class Main {
 
         ProductoRepositorioImpl productRepositoryImpl = new ProductoRepositorioImpl(this.manager.getDatabase()); 
         this.productController = new ProductControllerImpl(productRepositoryImpl);
+
+        EntregasRepositorioImpl entregasRepositorioImpl = new EntregasRepositorioImpl(this.manager.getDatabase());
+        this.entregaController = new EntregasControllerImpl(entregasRepositorioImpl);
     }
 
     public void startup() {
@@ -41,10 +52,12 @@ public class Main {
         OpenApiOptions openApi = new OpenApiOptions(applicationInfo)
                 .path("/api")
                 .swagger(new SwaggerOptions("/api-ui")); // endpoint for swagger-ui
-        Javalin server = Javalin.create(
+        Javalin server = Javalin.create(  
                 config -> {
-                    config.registerPlugin(new OpenApiPlugin(openApi));
-                }
+                        config.registerPlugin(new OpenApiPlugin(openApi));
+                        config.enableCorsForAllOrigins();
+                    }
+                    
         ).start(7000);
 
         server.get("api/customer/:id", this.customerController::find);
@@ -66,18 +79,45 @@ public class Main {
         
         //server.post("api/order/pay/:id", this.orderController::pay);
 
+        //Entregas
+        server.post("api/entrega", this.entregaController::create);
+        server.get("api/entregas", this.entregaController::findAll);
+
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             this.manager.closeDatabase();
             server.stop();
         }));
     }
 
-    public static void main(String[] args) {
-        
+
+    public static void main(String[] args) {//4 comentario
 
         new Main().startup();
+     
 
+        /*
+         try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(GUI_Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(GUI_Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(GUI_Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(GUI_Cliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
 
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GUI_Cliente().setVisible(true);
+            }
+        }); */
 
     }
                                         }

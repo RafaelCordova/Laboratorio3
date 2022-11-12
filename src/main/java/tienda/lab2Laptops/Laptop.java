@@ -12,12 +12,12 @@ package tienda.lab2Laptops;
 public abstract class Laptop {
     
     private double precio;
-    private int año;
+    private int aÃ±o;
     private float peso;
 
-    public Laptop(double precio, int año, float peso) {
+    public Laptop(double precio, int aÃ±o, float peso) {
         this.precio = precio;
-        this.año = año;
+        this.aÃ±o = aÃ±o;
         this.peso = peso;
     }
     
@@ -32,12 +32,12 @@ public abstract class Laptop {
         this.precio = precio;
     }
 
-    public int getAño() {
-        return año;
+    public int getAÃ±o() {
+        return aÃ±o;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setAÃ±o(int aÃ±o) {
+        this.aÃ±o = aÃ±o;
     }
 
     public float getPeso() {
@@ -49,7 +49,7 @@ public abstract class Laptop {
     }
 
     public String toString() {
-        return "Laptop{" + "precio=" + precio + ", a\u00f1o=" + año + ", peso=" + peso + '}';
+        return "Laptop{" + "precio=" + precio + ", a\u00f1o=" + aÃ±o + ", peso=" + peso + '}';
     }
     
 }
