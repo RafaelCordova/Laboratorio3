@@ -3,23 +3,24 @@ package tienda.Lab3Pregunta2;
 public class TestBridge {
 
     public static void main(String[] args) {
-
-            TipoReparto obj1= new TipoRecojoTienda();
+            //INTANCIAR TIPOS DE REPARTO Y HORARIOS
             AbstractHorarioEntrega h1 = new ConcreteManana();
-            h1.determinarHorarioEntrega();
-
-            TipoReparto obj2 = new TipoEnvioDeposito();
             AbstractHorarioEntrega h2 = new ConcreteTarde();
-            h2.determinarHorarioEntrega();
-
-            TipoReparto obj3 = new TipoEnvioDelivery();
             AbstractHorarioEntrega h3 = new ConcreteNoche();
-            h3.determinarHorarioEntrega();
+            TipoReparto obj1= new TipoRecojoTienda();
+            TipoReparto obj2= new TipoEnvioDeposito();
+            TipoReparto obj3= new TipoEnvioDelivery();
 
             //MOSTRAR LOS TESTEOS
             obj1.definirHorarioReparto(h1) ;
+            obj1.definirHorarioReparto(h2) ;
+            obj1.definirHorarioReparto(h3) ;
+            obj2.definirHorarioReparto(h1) ;
             obj2.definirHorarioReparto(h2) ;
+            obj2.definirHorarioReparto(h3) ;
+            obj3.definirHorarioReparto(h1) ;
+            obj3.definirHorarioReparto(h2) ;
             obj3.definirHorarioReparto(h3) ;
-                                             }
-                }
+    }
+}
 
