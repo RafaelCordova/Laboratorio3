@@ -1,25 +1,26 @@
 package tienda.Lab3_Pregunta3;
 
+
 import org.bson.types.ObjectId;
 import tienda.models.Cliente;
 
 import javax.swing.*;
 import java.util.List;
-
+import java.util.Scanner;
 
 public class ClienteFlyweight extends Cliente {
 
+    static Scanner entrada = new Scanner(System.in);
+
     private String paisNacimiento;
     private String paisDomiciliado;
-
     public static int indice = 0;
 
     public ClienteFlyweight() { }
 
-    public ClienteFlyweight(String paisN, String paisDomicilio) {
-        this.paisNacimiento = paisN;
-        this.paisDomiciliado = paisDomicilio;
-    }
+    public ClienteFlyweight(String paisNacimiento, String paisDomicilio) {
+        this.paisNacimiento = paisNacimiento;
+        this.paisDomiciliado = paisDomicilio;                            }
 
     public static void registrarEmpleado(List<ClienteFlyweight> p) {
 
@@ -40,7 +41,7 @@ public class ClienteFlyweight extends Cliente {
         p.add(new ClienteFlyweight(id, nombre, direccion, numeroDocumento, paisNacimiento, paisDomicilio));
 
         p.get(indice).setPaisDomiciliado(AbreviaturasFlyweightFactory.getOperacionAbreviatura(p.get(indice).getPaisDomiciliado()));
-        p.get(indice).setPaisN(AbreviaturasFlyweightFactory.getOperacionAbreviatura(p.get(indice).getPaisN()));
+        p.get(indice).setPaisNacimiento(AbreviaturasFlyweightFactory.getOperacionAbreviatura(p.get(indice).getPaisNacimiento()));
 
         indice++;
         JOptionPane.showMessageDialog(null, "CLIENTE REGISTRADO");
@@ -48,25 +49,22 @@ public class ClienteFlyweight extends Cliente {
 
 
     public static void mostrarEmpleados(List<ClienteFlyweight> p) {
-        p.stream().map(s -> s.getId() + "\t" + s.getNombre() + "\t" + s.getDireccion() + "\t" + s.getPaisN() + "\t" + s.getPaisDomiciliado()).forEach(System.out::println);
+        p.stream().map(s -> s.getId() + "\t" + s.getNombre() + "\t" + s.getDireccion() + "\t" + s.getPaisNacimiento() + "\t" + s.getPaisDomiciliado()).forEach(System.out::println);
     }
-
 
 
     public ClienteFlyweight(String id, String nombre, String direccion, String numeroDocumento, String paisNacimiento, String paisDomicilio) {
         super(id, nombre, direccion, numeroDocumento);
         this.paisNacimiento = paisNacimiento;
-        this.paisDomiciliado = paisDomicilio;
-    }
+        this.paisDomiciliado = paisDomicilio;               }
 
-
-    public String getPaisN() {
+    public String getPaisNacimiento() {
         return paisNacimiento;
     }
 
-    public void setPaisN(String paisN) {
-        this.paisNacimiento = paisN;
-        }
+    public void setPaisNacimiento(String paisNacimiento) {
+        this.paisNacimiento = paisNacimiento;
+    }
 
     public String getPaisDomiciliado() {
         return paisDomiciliado;
@@ -78,9 +76,6 @@ public class ClienteFlyweight extends Cliente {
 
     @Override
     public String toString() {
-        return "ClienteFlyweight{" +
-                "paisNacimiento='" + paisNacimiento + '\'' +
-                ", paisDomiciliado='" + paisDomiciliado + '\'' +
-                '}';
+        return "ClienteFlyweight{" + "paisNacimiento='" + paisNacimiento + '\'' +  ", paisDomiciliado='" + paisDomiciliado + '\'' + '}';
     }
 }

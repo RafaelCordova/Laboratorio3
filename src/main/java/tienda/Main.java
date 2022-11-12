@@ -6,10 +6,13 @@ import io.javalin.plugin.openapi.OpenApiPlugin;
 import io.javalin.plugin.openapi.ui.SwaggerOptions;
 import io.swagger.v3.oas.models.info.Info;
 
+
+
 import tienda.Lab3_Pregunta3.ClienteFlyweightMain;
 import tienda.Lab3_Pregunta4.controllers.Impl.EntregasControllerImpl;
 import tienda.Lab3_Pregunta4.repositories.EntregasRepositorio;
 import tienda.Lab3_Pregunta4.repositories.Impl.EntregasRepositorioImpl;
+
 import tienda.config.DBConnectionManager;
 import tienda.controllers.impl.CustomerControllerImpl;
 import tienda.controllers.impl.OrderControllerImpl;
@@ -86,10 +89,11 @@ public class Main {
         }));
     }
 
+
     public static void main(String[] args) {//4 comentario
 
         new Main().startup();
-       // ClienteFlyweightMain.test();
+     
 
         /*
          try {
@@ -114,10 +118,12 @@ public class Main {
                 new GUI_Cliente().setVisible(true);
             }
         }); */
+
     }
-}
-                
-                    
+                                        }
+
+
+
         
         
      

@@ -1,5 +1,6 @@
 package tienda.Lab3_Pregunta3;
 
+
 import tienda.models.Cliente;
 
 import java.util.HashMap;
@@ -12,27 +13,22 @@ public class AbreviaturasFlyweightFactory extends Cliente {
     public AbreviaturasFlyweightFactory() { }
 
     public static String getOperacionAbreviatura(String pais) {
-
         HashMap<String, String> abreviaturaPais = AbreviaturasFlyweightFactory.cacheAbreviaturas;
-
         AbreviaturasFlyweightFactory obj = new AbreviaturasFlyweightFactory();
         obj.cargaMemoriaCache();
-
         String paisAbreviado = "";
-
         for (Map.Entry<String, String> entry : abreviaturaPais.entrySet()) {
             String clave = entry.getKey();
             String valorAbreviado = entry.getValue();
             if (clave.equalsIgnoreCase(pais)) {
                 paisAbreviado = valorAbreviado;
-                break;
-            } else {
-                paisAbreviado = String.valueOf(pais.charAt(0)) + String.valueOf(pais.charAt(1));
+                return paisAbreviado;
             }
         }
+        paisAbreviado = String.valueOf(pais.charAt(0)) + String.valueOf(pais.charAt(1));
+        cacheAbreviaturas.put(pais,paisAbreviado);
         return paisAbreviado;
     }
-
 
     public static HashMap<String, String> getCacheAbreviaturas() {
         return cacheAbreviaturas;
@@ -56,6 +52,4 @@ public class AbreviaturasFlyweightFactory extends Cliente {
         cacheAbreviaturas.put("LA INDIA", "LA");
     }
 
-
 }
-
