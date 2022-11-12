@@ -15,14 +15,14 @@ public class Cliente {
     private String numeroDocumento;
     private Direccion dir;
     private ContactoCliente contacto;
-    private ClienteFlyweight clif;
+    private ClienteFlyweight clienteFlyweightAbreviado;
 
-    public ClienteFlyweight getClif() {
-        return clif;
+    public ClienteFlyweight getClienteFlyweightAbreviado() {
+        return clienteFlyweightAbreviado;
     }
 
     public void setClif(Cliente cliente, ClienteFlyweight clif) {
-        this.clif = clif;
+        this.clienteFlyweightAbreviado = clif;
     }
 
     public Cliente() {}
@@ -39,12 +39,12 @@ public class Cliente {
         this.direccion = direccion;
         this.numeroDocumento = numeroDocumento;
         this.dir = dir;
-                                                                                            }
+    }
 
 
-    public Cliente(String numeroDocumento) { 
-        this.numeroDocumento = numeroDocumento; 
-                                            }
+    public Cliente(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
+    }
 
     public String getId() {
         return id;
@@ -108,17 +108,17 @@ public class Cliente {
         salida.append("Cliente Id: ").append(cli.numeroDocumento);
         salida.append("\nNombres: ").append(cli.nombre);
         salida.append("\nDireccion: ").append(cli.direccion);
-        
+
         salida.append("\nPais: ").append(cli.dir.getPais());
         salida.append("\nReferencia: ").append(cli.dir.getReferencia());
         salida.append("\nManzana: ").append(cli.dir.getManzana());
         salida.append("\nLote: ").append(cli.dir.getLote());
         salida.append("\nContacto: ").append(cli.contacto);
-        return salida.toString(); 
-                                                    } 
-    
+        return salida.toString();
+    }
 
-/* 
+
+/*
     public String imprimeDatosCliente()  {
 
         StringBuffer salida = new StringBuffer();
@@ -128,12 +128,12 @@ public class Cliente {
         salida.append("\nDireccion: " + this.direccion);
         salida.append("\nManzana: " + this.direccion.getManzana());
         salida.append("\nLote: " + this.direccion.getLote());
-        return salida.toString(); 
-    } 
+        return salida.toString();
+    }
 */
 
-   
 
-   
+
+
 
 }
