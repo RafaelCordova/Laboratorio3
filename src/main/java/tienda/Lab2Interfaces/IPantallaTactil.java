@@ -12,6 +12,6 @@ package tienda.Lab2Interfaces;
 
 public interface IPantallaTactil {
 
-    public String tamaño(String tamaño);
+    public String tamaÃ±o(String tamaÃ±o);
 
 }

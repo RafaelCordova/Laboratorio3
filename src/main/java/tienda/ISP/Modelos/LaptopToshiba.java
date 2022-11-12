@@ -7,8 +7,8 @@ import tienda.ISP.Interfaces.IRam;
 
 public class LaptopToshiba extends Laptop implements IDiscoDuro,IRam{
 
-    public LaptopToshiba(String marca, double peso, int año) {
-        super(marca, peso, año);
+    public LaptopToshiba(String marca, double peso, int aÃ±o) {
+        super(marca, peso, aÃ±o);
     }
 
 
@@ -19,7 +19,7 @@ public class LaptopToshiba extends Laptop implements IDiscoDuro,IRam{
         System.out.println("ID :"+getId());
         System.out.println("SERIE :"+getSerie());
         System.out.println("PESO :"+getPeso());
-        System.out.println("AÑO :"+getAño());
+        System.out.println("Aï¿½O :"+getAÃ±o());
         System.out.println(capacidaDisco(capa));
         System.out.println(cantidadRam(ram));
                                                }

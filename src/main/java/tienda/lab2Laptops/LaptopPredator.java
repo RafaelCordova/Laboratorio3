@@ -19,8 +19,8 @@ import tienda.Lab2Interfaces.ITecladoLuminoso;
 
 public abstract class LaptopPredator extends Laptop implements ITarjetaDedicada,IDiscoM2,IConexionHDMI,ITecladoLuminoso,ICamaraWeb,IPantallaTactil{
 
-    public LaptopPredator(double precio, int año, float peso) {
-        super(precio, año, peso);
+    public LaptopPredator(double precio, int aÃ±o, float peso) {
+        super(precio, aÃ±o, peso);
     }
 
 
@@ -59,10 +59,10 @@ public abstract class LaptopPredator extends Laptop implements ITarjetaDedicada,
         System.out.println("La laptop Predator tiene camara web que graba en 4K");
         
     }
-    public void mostrardatos(String tamaño,String tipo,int velocidad,String version){
+    public void mostrardatos(String tamaÃ±o,String tipo,int velocidad,String version){
         
         System.out.println("El precio de la laptop Predator es de: "+getPrecio());
-        System.out.println("El año de la laptop Predator es de: "+getAño());
+        System.out.println("El aï¿½o de la laptop Predator es de: "+getAÃ±o());
         System.out.println("El peso de la laptop Predator es de: "+getPeso());
         System.out.println("El tipo de teclado de la laptop Predator es de: "+tipo(tipo));
         System.out.println("La velocidad del discoM2 de la laptop Predator es de: "+velocidad(velocidad));
