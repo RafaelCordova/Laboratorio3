@@ -12,15 +12,15 @@ public class TestBridge {
             TipoReparto obj3= new TipoEnvioDelivery();
 
             //MOSTRAR LOS TESTEOS
-            obj1.definirHorarioReparto(h1) ;
-            obj1.definirHorarioReparto(h2) ;
-            obj1.definirHorarioReparto(h3) ;
-            obj2.definirHorarioReparto(h1) ;
-            obj2.definirHorarioReparto(h2) ;
-            obj2.definirHorarioReparto(h3) ;
-            obj3.definirHorarioReparto(h1) ;
-            obj3.definirHorarioReparto(h2) ;
-            obj3.definirHorarioReparto(h3) ;
+            obj1.definirReparto(h1) ;
+            obj1.definirReparto(h2) ;
+            obj1.definirReparto(h3) ;
+            obj2.definirReparto(h1) ;
+            obj2.definirReparto(h2) ;
+            obj2.definirReparto(h3) ;
+            obj3.definirReparto(h1) ;
+            obj3.definirReparto(h2) ;
+            obj3.definirReparto(h3) ;
     }
 }
 

@@ -7,7 +7,7 @@ public class TipoEnvioDelivery extends TipoReparto{
         return this.getTipoR();
     }
     @Override
-    public void definirHorarioReparto(AbstractHorarioEntrega horarioEntrega){
+    public void definirReparto(AbstractHorarioEntrega horarioEntrega){
         horarioEntrega.determinarHorarioEntrega();
         System.out.println("El tipo de reparto es " + definirTipoReparto() + " y con horario :" + horarioEntrega.getHorario());
     }
