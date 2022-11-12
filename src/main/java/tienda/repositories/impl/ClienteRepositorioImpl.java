@@ -754,26 +754,25 @@ public class ClienteRepositorioImpl implements ClienteRepositorio {
     public void create(Cliente cliente) {
         
         //INGRESO VIA POSTMAN
-
         lista = new LinkedList<>(ClienteFlyweightMain.clientesFlyweight);
 
-       System.out.println("entrando: " + cliente);
-        cliente.setId((new ObjectId()).toString());
+       System.out.println("entrando: " + cliente.toString());
+       // cliente.setId((new ObjectId()).toString());
 
        //  System.out.println("\nCLIENTE REGISTRADO CORRECTAMENTE");
       //  System.out.println( objCli.imprimeDatosCliente(cliente));
 
       //INGRESO VIA GUI
-      // cliente.setId((new ObjectId()).toString());
 
+        cliente.setId((new ObjectId()).toString());
         cliente.setNombre(lista.get(lista.size()-1).getNombre());
         cliente.setNumeroDocumento(lista.get(lista.size()-1).getNumeroDocumento());
         cliente.setDireccion(lista.get(lista.size()-1).getDireccion());
 
-        String paisNa = ClienteFlyweightMain.clientesFlyweight.get(ClienteFlyweightMain.clientesFlyweight.size()-1).getPaisN();
-        String paisDo = ClienteFlyweightMain.clientesFlyweight.get(ClienteFlyweightMain.clientesFlyweight.size()-1).getPaisDomiciliado();
+        String paisNacimiento = ClienteFlyweightMain.clientesFlyweight.get(ClienteFlyweightMain.clientesFlyweight.size()-1).getPaisNacimiento();
+        String paisDomiciliado = ClienteFlyweightMain.clientesFlyweight.get(ClienteFlyweightMain.clientesFlyweight.size()-1).getPaisDomiciliado();
 
-        cliente.setClif(lista.get(lista.size()-1),new ClienteFlyweight(paisNa,paisDo));
+        cliente.setClif(lista.get(lista.size()-1),new ClienteFlyweight(paisNacimiento,paisDomiciliado));
 
        // clientes.insertOne(cliente); // PARA POSTMAN Y GUI
             

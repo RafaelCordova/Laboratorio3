@@ -74,9 +74,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
         new Main().startup();
         ClienteFlyweightMain.test();
+                                }
+                                        }
 
         /*
          try {
@@ -101,9 +102,7 @@ public class Main {
                 new GUI_Cliente().setVisible(true);
             }
         }); */
-    }
-}
-                
+
                     
         
         

@@ -15,14 +15,14 @@ public class Cliente {
     private String numeroDocumento;
     private Direccion dir;
     private ContactoCliente contacto;
-    private ClienteFlyweight clif;
+    private ClienteFlyweight clienteFlyweightAbreviado;
 
-    public ClienteFlyweight getClif() {
-        return clif;
+    public ClienteFlyweight getClienteFlyweightAbreviado() {
+        return clienteFlyweightAbreviado;
     }
 
     public void setClif(Cliente cliente, ClienteFlyweight clif) {
-        this.clif = clif;
+        this.clienteFlyweightAbreviado = clif;
     }
 
     public Cliente() {}
