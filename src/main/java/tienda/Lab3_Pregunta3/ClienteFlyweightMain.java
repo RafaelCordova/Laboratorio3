@@ -1,5 +1,6 @@
 package tienda.Lab3_Pregunta3;
 
+
 import java.util.*;
 
 import tienda.repositories.impl.ClienteRepositorioImpl;
@@ -13,7 +14,7 @@ public class ClienteFlyweightMain {
 
         //System.out.println(p.operacionAbreviatura("BOLIVIA"));
         int opc;
-        System.out.println("=======REGISTRO DE EMPLEADOS CON PATRON FLYWEIGHT========");
+        System.out.println("=======REGISTRO DE CLIENTES CON PATRON FLYWEIGHT========");
         System.out.println("1. REGISTRAR EMPLEADO");
         System.out.println("2. MOSTRAR  EMPLEADOS");
 
@@ -29,9 +30,9 @@ public class ClienteFlyweightMain {
                 case 2:
                     ClienteFlyweight.mostrarEmpleados(clientesFlyweight);
                     break;
-                            }
+            }
         } while (opc != 4);
-                                                }
+    }
 
 
-                                }
+}

@@ -1,6 +1,5 @@
 package tienda.controllers.impl;
 
-import tienda.Lab3_Pregunta3.ClienteFlyweight;
 import tienda.config.Paths;
 //import tienda.config.Paths;
 import tienda.controllers.CustomerController;
@@ -27,20 +26,21 @@ public class CustomerControllerImpl implements CustomerController {
     }
 
     @Override
-    public void  create(Context context) {
+    public void create(Context context) {
                    
     Cliente customer = context.bodyAsClass(Cliente.class);
       customerRepository.create(customer);
         
         context.status(HttpStatus.CREATED_201)
-               .header(HttpHeader.LOCATION.name(), Paths.formatPostLocation(customer.getId()));
-
-                                            }
-
+                .header(HttpHeader.LOCATION.name(), Paths.formatPostLocation(customer.getId()));
+        
+    }
+       
     @Override
     public void delete(Context context) {
         customerRepository.delete(context.pathParam(ID));
-                            }
+
+    }
 
     @Override
     public void find(Context context) {
@@ -50,8 +50,10 @@ public class CustomerControllerImpl implements CustomerController {
         if (customer == null) {
             throw new NotFoundResponse(String.format("A customer with id '%s' is not found", id));
         }
+
         context.json(customer);
-                                    }
+
+    }
 
     @Override
     public void findAll(Context context) {
@@ -60,14 +62,17 @@ public class CustomerControllerImpl implements CustomerController {
 
     @Override
     public void update(Context context) {
-        ClienteFlyweight customer = context.bodyAsClass(ClienteFlyweight.class);
+        Cliente customer = context.bodyAsClass(Cliente.class);
         String id = context.pathParam(ID);
 
         if (customer.getId() != null && !customer.getId().toString().equals(id)) {
             throw new BadRequestResponse("Id update is not allowed");
         }
+
         customerRepository.update(customer, id);
 
-                                         }
+    }
+
+   
 
 }

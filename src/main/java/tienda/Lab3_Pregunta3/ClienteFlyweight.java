@@ -1,12 +1,16 @@
 package tienda.Lab3_Pregunta3;
 
+
 import org.bson.types.ObjectId;
 import tienda.models.Cliente;
 
 import javax.swing.*;
 import java.util.List;
+import java.util.Scanner;
 
 public class ClienteFlyweight extends Cliente {
+
+    static Scanner entrada = new Scanner(System.in);
 
     private String paisNacimiento;
     private String paisDomiciliado;
@@ -16,7 +20,7 @@ public class ClienteFlyweight extends Cliente {
 
     public ClienteFlyweight(String paisNacimiento, String paisDomicilio) {
         this.paisNacimiento = paisNacimiento;
-        this.paisDomiciliado = paisDomicilio;                  }
+        this.paisDomiciliado = paisDomicilio;                            }
 
     public static void registrarEmpleado(List<ClienteFlyweight> p) {
 
@@ -60,7 +64,7 @@ public class ClienteFlyweight extends Cliente {
 
     public void setPaisNacimiento(String paisNacimiento) {
         this.paisNacimiento = paisNacimiento;
-        }
+    }
 
     public String getPaisDomiciliado() {
         return paisDomiciliado;

@@ -1,9 +1,5 @@
 package tienda.repositories;
 import java.util.LinkedList;
-import tienda.Lab3_Pregunta3.*;
-
-
-import tienda.Lab3_Pregunta3.ClienteFlyweight;
 import tienda.models.Cliente;
 
 import java.util.List;
@@ -20,4 +16,5 @@ public interface ClienteRepositorio {
 
     void delete(String id);
 
+   
 }

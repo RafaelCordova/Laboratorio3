@@ -1,22 +1,16 @@
 package tienda.Lab3Pregunta2;
 
-public class TipoReparto extends AbstractTipoReparto{
+public abstract class TipoReparto{
 
     private String tipoR;
-    private AbstractHorarioEntrega abstractHorarioEntrega;
 
-    public TipoReparto() { }
+    private AbstractHorarioEntrega horarioEntrega;
 
-    public TipoReparto(String tipoR, AbstractHorarioEntrega abstractHorarioEntrega) {
-        this.tipoR = tipoR;
-        this.abstractHorarioEntrega = abstractHorarioEntrega;
-                                                                    }
+    public abstract String definirTipoReparto();
 
-    public String getTipoR() { return tipoR; }
-    public void setTipoR(String tipoR) { this.tipoR = tipoR; }
-    public AbstractHorarioEntrega getHorarioEntrega() { return abstractHorarioEntrega; }
-    public void setHorarioEntrega(AbstractHorarioEntrega abstractHorarioEntrega) { this.abstractHorarioEntrega = abstractHorarioEntrega;}
+    public abstract void definirHorarioReparto(AbstractHorarioEntrega horario);
 
+<<<<<<< Updated upstream
     @Override
     public String toString() { return "TipoReparto{" + "tipoR='" + tipoR + '\'' +  ", abstractHorarioEntrega=" + abstractHorarioEntrega + '}'; }
     
@@ -25,4 +19,28 @@ public class TipoReparto extends AbstractTipoReparto{
     public void definirTipoReparto() {
         System.out.println("EL TIPO DE REPARTO ES "+tipoR+" y con horario de entrega :"+ abstractHorarioEntrega.getHorario());
                                      }
+=======
+
+    public String getTipoR() {
+        return tipoR;
+    }
+
+    public void setTipoR(String tipoR) {
+        this.tipoR = tipoR;
+    }
+
+    public AbstractHorarioEntrega getHorarioEntrega() {
+        return horarioEntrega;
+    }
+
+    public void setHorarioEntrega(AbstractHorarioEntrega abstractHorarioEntrega) {
+        this.horarioEntrega = abstractHorarioEntrega;
+    }
+
+    @Override
+    public String toString() {
+        return "TipoReparto{" + "tipoR='" + tipoR + '\'' +  ", horarioEntrega=" + horarioEntrega + '}';
+    }
+
+>>>>>>> Stashed changes
                                                         }

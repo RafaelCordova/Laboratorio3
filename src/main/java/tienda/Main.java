@@ -5,6 +5,8 @@ import io.javalin.plugin.openapi.OpenApiOptions;
 import io.javalin.plugin.openapi.OpenApiPlugin;
 import io.javalin.plugin.openapi.ui.SwaggerOptions;
 import io.swagger.v3.oas.models.info.Info;
+import java.util.Scanner;
+import tienda.InterfazCliente.GUI_Cliente;
 
 import tienda.Lab3Pregunta2.RepartoMain;
 import tienda.Lab3_Pregunta3.ClienteFlyweightMain;
@@ -75,12 +77,18 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        
+
         new Main().startup();
+<<<<<<< Updated upstream
         //ClienteFlyweightMain.test();
         RepartoMain.test();
     }
                                         }
 
+=======
+        ClienteFlyweightMain.test();
+>>>>>>> Stashed changes
         /*
          try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -104,7 +112,9 @@ public class Main {
                 new GUI_Cliente().setVisible(true);
             }
         }); */
-
+    }
+}
+                
                     
         
         
