@@ -1,6 +1,9 @@
 package tienda.models;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 public class BancoMetodoPago implements MetodoPago {
 
     private String bankId;
@@ -21,6 +24,7 @@ public class BancoMetodoPago implements MetodoPago {
                              }
 
     public void setBankId(String bankId){   this.bankId = bankId; }
+<<<<<<< HEAD
                                                     }
 =======
 public class BancoMetodoPago extends MetodoPago {
@@ -52,3 +56,6 @@ public class BancoMetodoPago extends MetodoPago {
     }
 }
 >>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
+=======
+                                                    }
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34

@@ -1,6 +1,7 @@
 package tienda.repositories.impl;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import tienda.Lab3_Pregunta1.AuditoriaFiDecorator;
 import tienda.Lab3_Pregunta1.AuditoriaReDecorator;
 import tienda.Lab3_Pregunta1.Inspeccion;
@@ -10,6 +11,8 @@ import tienda.models.Cliente;
 import tienda.models.PagaloYaMetodoPago;
 =======
 >>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 import tienda.models.Pedido;
 import tienda.repositories.PedidoRepositorio;
 
@@ -43,6 +46,7 @@ public class PedidoRepositorioImpl implements PedidoRepositorio {
 
         pedido.setId((new ObjectId()).toString());
 <<<<<<< HEAD
+<<<<<<< HEAD
         inspeccionEmpresa(pedido.getClienteObj(), pedido.getMontoTotal(), pedido);
 
         if(pedido.isEstado()){
@@ -54,6 +58,8 @@ public class PedidoRepositorioImpl implements PedidoRepositorio {
         }
 =======
 >>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
         pedidos.insertOne(pedido);
     }
 
@@ -85,6 +91,7 @@ public class PedidoRepositorioImpl implements PedidoRepositorio {
         return pedidos.findOneAndReplace(new Document("_id", id), post, UPDATE_OPTIONS);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public void inspeccionEmpresa(Cliente cliObj, double montoTotal, Pedido order){
         IEmpresaInspeccion inspeccion;
@@ -115,5 +122,7 @@ public class PedidoRepositorioImpl implements PedidoRepositorio {
     }
 =======
 >>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
     
 }

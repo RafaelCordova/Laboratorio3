@@ -5,6 +5,9 @@ import com.fasterxml.uuid.Generators;
 import java.util.UUID;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 public class BlockChainMetodoPago implements MetodoPago {
 
     private String walletId;
@@ -17,6 +20,7 @@ public class BlockChainMetodoPago implements MetodoPago {
     public void walletPayOrder(Pedido order){
         System.out.println("Procesando el pago con wallet "+getWalletId()+
         " | total: "+order.getMontoTotal() + " comision: " +this.devolverComision(order.getMontoTotal()));  }
+<<<<<<< HEAD
 =======
 public class BlockChainMetodoPago extends MetodoPago {
 
@@ -35,17 +39,23 @@ public class BlockChainMetodoPago extends MetodoPago {
         System.out.println("Procesando el pago con wallet "+getWalletId()+" | total: "+order.getMontoTotal() + " comision: " +comision);
     }
 >>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 
     public String getWalletId() {
         if(this.walletId == null){
             UUID uuid = Generators.timeBasedGenerator().generate();
             setWalletId(uuid.toString());
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
                                  }
         return walletId;
                                 }
 
     public void setWalletId(String walletId){   this.walletId = walletId; }
+<<<<<<< HEAD
 =======
         }
         return walletId;
@@ -55,4 +65,6 @@ public class BlockChainMetodoPago extends MetodoPago {
         this.walletId = walletId;
     }
 >>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 }

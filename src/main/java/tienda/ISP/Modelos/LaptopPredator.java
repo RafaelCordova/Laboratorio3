@@ -16,8 +16,13 @@ import tienda.ISP.Interfaces.ITarjetaVideo;
  */
 public class LaptopPredator extends Laptop implements ITarjetaVideo,IDiscoDuro,IRam,IDiscoM2{
     
+<<<<<<< HEAD
     public LaptopPredator(String serie, double peso, int aÃ±o) {
         super(serie, peso, aÃ±o);
+=======
+    public LaptopPredator(String serie, double peso, int año) {
+        super(serie, peso, año);
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
     }
 
     public void datos(String marcaVideo,String modeloVideo,double capa,double ram,String marcaM2,double costoM2){
@@ -25,7 +30,11 @@ public class LaptopPredator extends Laptop implements ITarjetaVideo,IDiscoDuro,I
         System.out.println("ID : "+getId());
         System.out.println("SERIE :"+getSerie());
          System.out.println("PESO :"+getPeso());
+<<<<<<< HEAD
         System.out.println("Aï¿½O :"+getAÃ±o());
+=======
+        System.out.println("AÑO :"+getAño()); 
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
         System.out.println(mostrarVideo(marcaVideo,modeloVideo));
         System.out.println(capacidaDisco(capa));
         System.out.println(cantidadRam(ram));

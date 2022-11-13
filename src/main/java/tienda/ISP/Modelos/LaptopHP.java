@@ -12,8 +12,13 @@ import tienda.ISP.Interfaces.ITarjetaVideo;
 
 public class LaptopHP extends Laptop implements ITarjetaVideo,IDiscoDuro,IRam{
 
+<<<<<<< HEAD
     public LaptopHP(String serie, double peso, int aÃ±o) {
         super(serie, peso, aÃ±o);
+=======
+    public LaptopHP(String serie, double peso, int año) {
+        super(serie, peso, año);
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
                                                         }
 
     
@@ -22,7 +27,11 @@ public class LaptopHP extends Laptop implements ITarjetaVideo,IDiscoDuro,IRam{
            System.out.println("ID: "+getId());
         System.out.println("SERIE :"+getSerie());
         System.out.println("PESO :"+getPeso());
+<<<<<<< HEAD
         System.out.println("Aï¿½O :"+getAÃ±o());
+=======
+        System.out.println("AÑO :"+getAño());
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
         System.out.println(mostrarVideo(marcaVideo,modeloVideo));
         System.out.println(capacidaDisco(capacidadDisco));
         System.out.println(cantidadRam(Caparam));

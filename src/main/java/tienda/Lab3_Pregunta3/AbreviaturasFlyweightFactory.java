@@ -1,6 +1,9 @@
 package tienda.Lab3_Pregunta3;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 import tienda.models.Cliente;
 
 import java.util.HashMap;
@@ -23,6 +26,7 @@ public class AbreviaturasFlyweightFactory extends Cliente {
             if (clave.equalsIgnoreCase(pais)) {
                 paisAbreviado = valorAbreviado;
                 return paisAbreviado;
+<<<<<<< HEAD
             }
         }
         paisAbreviado = String.valueOf(pais.charAt(0)) + String.valueOf(pais.charAt(1));
@@ -33,6 +37,18 @@ public class AbreviaturasFlyweightFactory extends Cliente {
     public static HashMap<String, String> getCacheAbreviaturas() {
         return cacheAbreviaturas;
     }
+=======
+                                                }
+                                                                        }
+        paisAbreviado = String.valueOf(pais.charAt(0)) + String.valueOf(pais.charAt(1));
+        cacheAbreviaturas.put(pais,paisAbreviado);
+        return paisAbreviado;
+                                                                }
+
+    public static HashMap<String, String> getCacheAbreviaturas() {
+        return cacheAbreviaturas;
+                                                        }
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 
     public void cargaMemoriaCache() {
         cacheAbreviaturas.put("PERU", "PE");
@@ -50,6 +66,13 @@ public class AbreviaturasFlyweightFactory extends Cliente {
         cacheAbreviaturas.put("FRANCIA", "FRA");
         cacheAbreviaturas.put("INGLATERRA", "ING");
         cacheAbreviaturas.put("LA INDIA", "LA");
+<<<<<<< HEAD
     }
 
 }
+=======
+                                 }
+
+                                            }
+
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34

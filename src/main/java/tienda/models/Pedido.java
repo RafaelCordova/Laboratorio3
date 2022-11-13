@@ -3,7 +3,10 @@ package tienda.models;
 import java.util.List;
 import tienda.models.interfaces.IPedidoDetalle;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 public class Pedido {
     private String id;
     private Double montoTotal;
@@ -11,6 +14,7 @@ public class Pedido {
     private String cliente;
     private List<IPedidoDetalle> detallePedido;
     private Cliente clienteObj;
+<<<<<<< HEAD
 <<<<<<< HEAD
     private boolean estado;
 
@@ -26,6 +30,11 @@ public class Pedido {
     public Pedido() {}
 
 >>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
+=======
+
+    public Pedido() {}
+
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
     public Cliente getClienteObj() {
         return clienteObj;
     }
@@ -100,10 +109,14 @@ public class Pedido {
     public void pagar(MetodoPago paymentMethod)   {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         System.out.println("\nPROCESANDO PEDIDO ...");
 =======
         System.out.println("Paying order ...");
 >>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
+=======
+        System.out.println("\nPROCESANDO PEDIDO ...");
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
         paymentMethod.pagarPedido(this);
     }
 }

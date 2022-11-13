@@ -8,6 +8,7 @@ public class Laptop extends Producto{
     
     private String serie;
     private double peso;
+<<<<<<< HEAD
     private int aÃ±o;
 
 
@@ -16,6 +17,16 @@ public class Laptop extends Producto{
         this.serie = marca;
         this.peso = peso;
         this.aÃ±o = aÃ±o;
+=======
+    private int año;
+
+
+    
+    public Laptop(String marca, double peso, int año) {
+        this.serie = marca;
+        this.peso = peso;
+        this.año = año;
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
     }
 
     public double getPeso() {
@@ -36,17 +47,30 @@ public class Laptop extends Producto{
     }
 
 
+<<<<<<< HEAD
     public int getAÃ±o() {
         return aÃ±o;
     }
 
     public void setAÃ±o(int aÃ±o) {
         this.aÃ±o = aÃ±o;
+=======
+    public int getAño() {
+        return año;
+    }
+
+    public void setAño(int año) {
+        this.año = año;
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
     }
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "Laptop{" + "serie=" + serie + ", peso=" + peso + ", aï¿½o lanzamiento=" + aÃ±o + '}';
+=======
+        return "Laptop{" + "serie=" + serie + ", peso=" + peso + ", año lanzamiento=" + año + '}';
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
     }
     
     

@@ -18,8 +18,13 @@ import tienda.Lab2Interfaces.ITecladoLuminoso;
 
 public class LaptopLenovo extends Laptop implements IDiscoSolido,ITarjetaIntegrada,ITecladoLuminoso,IConexionHDMI {
 
+<<<<<<< HEAD
     public LaptopLenovo(double precio, int aÃ±o, float peso) {
         super(precio, aÃ±o, peso);
+=======
+    public LaptopLenovo(double precio, int año, float peso) {
+        super(precio, año, peso);
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
     }
 
     @Override
@@ -53,7 +58,11 @@ public class LaptopLenovo extends Laptop implements IDiscoSolido,ITarjetaIntegra
     public void mostrardatos(String tipo,String procesador,String tipoDeInterfaz){
         
         System.out.println("El precio de la laptop Lenovo es de: "+getPrecio());
+<<<<<<< HEAD
         System.out.println("El aï¿½o de la laptop Lenovo es de: "+getAÃ±o());
+=======
+        System.out.println("El año de la laptop Lenovo es de: "+getAño());
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
         System.out.println("El peso de la laptop Lenovo es de: "+getPeso());
         System.out.println("El tipo de teclado de la laptop Lenovo es de: "+tipo(tipo));
         System.out.println("El procesador con tarjeta integrada de la laptop Lenovo es de: "+procesador(procesador));

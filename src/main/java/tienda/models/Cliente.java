@@ -1,6 +1,9 @@
 package tienda.models;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 
 import tienda.Lab3_Pregunta3.ClienteFlyweight;
 
@@ -10,13 +13,17 @@ public class Cliente {
 
     public static Scanner entrada = new Scanner(System.in);
 
+<<<<<<< HEAD
 =======
 public class Cliente {
 >>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
     private String id;
     private String nombre;
     private String direccion;
     private String numeroDocumento;
+<<<<<<< HEAD
 <<<<<<< HEAD
     private Direccion dir;
     private ContactoCliente contacto;
@@ -30,6 +37,10 @@ public class Cliente {
         this.clienteEmpresa = clienteEmpresa;
     }
 
+=======
+    private Direccion dir;
+    private ContactoCliente contacto;
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
     private ClienteFlyweight clienteFlyweightAbreviado;
 
     public ClienteFlyweight getClienteFlyweightAbreviado() {
@@ -54,6 +65,7 @@ public class Cliente {
         this.direccion = direccion;
         this.numeroDocumento = numeroDocumento;
         this.dir = dir;
+<<<<<<< HEAD
     }
 
 
@@ -67,6 +79,14 @@ public class Cliente {
         this.numeroDocumento = numeroDocumento; 
 >>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
     }
+=======
+                                                                                            }
+
+
+    public Cliente(String numeroDocumento) { 
+        this.numeroDocumento = numeroDocumento; 
+                                            }
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 
     public String getId() {
         return id;
@@ -101,6 +121,9 @@ public class Cliente {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
     public Direccion getDir() {
         return dir;
     }
@@ -131,12 +154,17 @@ public class Cliente {
         salida.append("Cliente Id: ").append(cli.numeroDocumento);
         salida.append("\nNombres: ").append(cli.nombre);
         salida.append("\nDireccion: ").append(cli.direccion);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
         salida.append("\nPais: ").append(cli.dir.getPais());
         salida.append("\nReferencia: ").append(cli.dir.getReferencia());
         salida.append("\nManzana: ").append(cli.dir.getManzana());
         salida.append("\nLote: ").append(cli.dir.getLote());
         salida.append("\nContacto: ").append(cli.contacto);
+<<<<<<< HEAD
         salida.append("\n***** DATOS FINANCIEROS *****");
         salida.append("\n"+cli.clienteEmpresa.toString());
         return salida.toString();
@@ -144,6 +172,13 @@ public class Cliente {
 
 
 /*
+=======
+        return salida.toString(); 
+                                                    } 
+    
+
+/* 
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
     public String imprimeDatosCliente()  {
 
         StringBuffer salida = new StringBuffer();
@@ -153,6 +188,7 @@ public class Cliente {
         salida.append("\nDireccion: " + this.direccion);
         salida.append("\nManzana: " + this.direccion.getManzana());
         salida.append("\nLote: " + this.direccion.getLote());
+<<<<<<< HEAD
         return salida.toString();
     }
 */
@@ -171,4 +207,14 @@ public class Cliente {
         return salida.toString();
     }
 >>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
+=======
+        return salida.toString(); 
+    } 
+*/
+
+   
+
+   
+
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 }

@@ -60,6 +60,10 @@ public class ContactoCliente {
         return "ContactoCliente{" + "parentesco=" + parentesco + ", nombre=" + nombre + ", docContact=" + docContact + ", numTelefonico=" + numTelefonico + '}';
     }
 
+<<<<<<< HEAD
     
     
+=======
+
+>>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 }
