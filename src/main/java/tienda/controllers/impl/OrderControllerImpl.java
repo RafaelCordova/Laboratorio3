@@ -2,16 +2,7 @@ package tienda.controllers.impl;
 
 import tienda.config.Paths;
 import tienda.controllers.OrderController;
-<<<<<<< HEAD
-<<<<<<< HEAD
 import tienda.models.PagaloYaMetodoPago;
-=======
-import tienda.models.BancoMetodoPago;
-import tienda.models.BlockChainMetodoPago;
->>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
-=======
-import tienda.models.PagaloYaMetodoPago;
->>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 import tienda.models.Cliente;
 import tienda.models.Pedido;
 import tienda.models.impl.PedidoDetalleInternet;
@@ -51,18 +42,8 @@ public class OrderControllerImpl implements OrderController {
         Pedido order = context.bodyAsClass(Pedido.class);
 
         List<IPedidoDetalle> items = new ArrayList<>();
-<<<<<<< HEAD
-<<<<<<< HEAD
         PedidoDetalleInternet oi1 = new PedidoDetalleInternet( "P01010035", 2, 800.0);
         PedidoDetallePromocion oi2 = new PedidoDetallePromocion( "P01010026", 3, 1050.5);
-=======
-        PedidoDetalleInternet oi1 = new PedidoDetalleInternet( "P01010034", 1, 400.90);
-        PedidoDetallePromocion oi2 = new PedidoDetallePromocion( "P01010025", 1, 600.90);
->>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
-=======
-        PedidoDetalleInternet oi1 = new PedidoDetalleInternet( "P01010035", 2, 800.0);
-        PedidoDetallePromocion oi2 = new PedidoDetallePromocion( "P01010026", 3, 1050.5);
->>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
         items.add(oi1);
         items.add(oi2);
         order.setDetallePedido(items);
@@ -72,10 +53,6 @@ public class OrderControllerImpl implements OrderController {
 
         //MetodoPago paymentMethod = new MetodoPago();
         //BlockChainMetodoPago paymentMethod = new BlockChainMetodoPago();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
         //BancoMetodoPago paymentMethod = new BancoMetodoPago();
         PagaloYaMetodoPago paymentMethod = new PagaloYaMetodoPago();
 
@@ -85,18 +62,6 @@ public class OrderControllerImpl implements OrderController {
         order.setClienteObj( cliObj );
         System.out.println( cliObj.imprimeDatosCliente(cliObj)) ;
        //System.out.println( cliObj.imprimeDatosCliente()) ;
-<<<<<<< HEAD
-=======
-        BancoMetodoPago paymentMethod = new BancoMetodoPago();
-        order.pagar(paymentMethod);
-
-        Cliente cliObj = (Cliente)customerRepository.find("628847c0587057049d2adc0a");
-        order.setClienteObj( cliObj );
-        System.out.println( cliObj.imprimeDatosCliente() );
-
->>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
-=======
->>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
         orderRepository.create(order);
             
         context.status(HttpStatus.CREATED_201)

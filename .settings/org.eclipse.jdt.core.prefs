@@ -1,8 +1,4 @@
 eclipse.preferences.version=1
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
 enableParallelJavaIndexSearch=true
 org.eclipse.jdt.core.builder.annotationPath.allLocations=disabled
 org.eclipse.jdt.core.builder.cleanOutputFolder=clean
@@ -578,16 +574,3 @@ org.eclipse.jdt.core.incompatibleJDKLevel=ignore
 org.eclipse.jdt.core.incompleteClasspath=error
 org.eclipse.jdt.core.javaFormatter=org.eclipse.jdt.core.defaultJavaFormatter
 org.eclipse.jdt.core.timeoutForParameterNameFromAttachedJavadoc=50
-<<<<<<< HEAD
-=======
-org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
-org.eclipse.jdt.core.compiler.compliance=1.8
-org.eclipse.jdt.core.compiler.problem.enablePreviewFeatures=disabled
-org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
-org.eclipse.jdt.core.compiler.problem.reportPreviewFeatures=ignore
-org.eclipse.jdt.core.compiler.processAnnotations=disabled
-org.eclipse.jdt.core.compiler.release=disabled
-org.eclipse.jdt.core.compiler.source=1.8
->>>>>>> 831e962f4cbcb481952f4526c3cdd0402f4aa8ec
-=======
->>>>>>> 108d8b2bb3439fc3b21f54a41a9bfa8966b39e34
